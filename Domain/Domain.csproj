@@ -90,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Models\Flight.cs" />
+    <Compile Include="Models\Journey.cs" />
+    <Compile Include="Models\Transport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -98,7 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contracts\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
