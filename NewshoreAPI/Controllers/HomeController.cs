@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.Contracts;
+using Microsoft.AspNetCore.Mvc;
 using NewshoreAPI.Models;
 using System.Diagnostics;
 

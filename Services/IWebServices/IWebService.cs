@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services
+namespace Services.IWebServices
 {
-    public class Class1
+    public interface IWebService
     {
+        string GetHTTPService(string url);
     }
 }
