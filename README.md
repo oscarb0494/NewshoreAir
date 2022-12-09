@@ -9,10 +9,10 @@ Este es el backend del proyecto prueba presentando para la empresa NewShore. Se 
 
 El estado del backend queda finalizado, consume la API y obtiene los datos y se almacenan en una lista de objetos.
 
-### Requisitos Backend: 
+## Requisitos Backend: 
 ***
 
-# 1. Visual Studio 2022
+### 1. Visual Studio 2022
  
 ### 2. Nugets:  
  
