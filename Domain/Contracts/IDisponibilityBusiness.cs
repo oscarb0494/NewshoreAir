@@ -9,6 +9,6 @@ namespace Domain.Contracts
 {
     public  interface IDisponibilityBusiness
     {
-        Journey GetDisponibility(Request disponibilityRequest);
+        IEnumerable<Flight> GetDisponibility(Request disponibilityRequest);
     }
 }

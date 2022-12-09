@@ -16,11 +16,12 @@ namespace NewshoreAPI.IOC
         {
             builder.RegisterType<WebService>().As<IWebService>().SingleInstance();
             builder.RegisterType<DisponibilityBusiness>().As<IDisponibilityBusiness>().SingleInstance();
-            builder.RegisterType<FlightResponse_Journey<Journey,List<FlightResponse>>>().As<IMap<Journey,List<FlightResponse>>>().SingleInstance();
+            builder.RegisterType<FlightResponse_Journey<List<Flight>,List<FlightResponse>>>().As<IMap<List<Flight>,List<FlightResponse>>>().SingleInstance();
+            builder.RegisterType<Flight_Transport<Transport,FlightResponse>>().As<IMap<Transport,FlightResponse>>().SingleInstance();
 
             builder.Register(context => new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<List<FlightResponse>, Journey>();
+                cfg.CreateMap<List<FlightResponse>, List<Flight>>();
                 //etc...
             })).AsSelf().SingleInstance();
 

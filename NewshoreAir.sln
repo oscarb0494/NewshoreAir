@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewshoreAPI", "NewshoreAPI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{09F78AA7-75FC-4341-9054-32D84FBACCA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newshore_Frontend", "Newshore_Frontend\Newshore_Frontend.csproj", "{4FFFE925-2D50-4BCF-A7E0-57158B8C5486}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{09F78AA7-75FC-4341-9054-32D84FBACCA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09F78AA7-75FC-4341-9054-32D84FBACCA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09F78AA7-75FC-4341-9054-32D84FBACCA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFFE925-2D50-4BCF-A7E0-57158B8C5486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFFE925-2D50-4BCF-A7E0-57158B8C5486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFFE925-2D50-4BCF-A7E0-57158B8C5486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFFE925-2D50-4BCF-A7E0-57158B8C5486}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

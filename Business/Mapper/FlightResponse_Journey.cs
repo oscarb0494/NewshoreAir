@@ -1,4 +1,5 @@
-﻿using Domain.Contracts;
+﻿using AutoMapper;
+using Domain.Contracts;
 using Domain.Models;
 using Domain.Models.Third;
 using System;
@@ -11,22 +12,30 @@ namespace Business.Mapper
 {
     public class FlightResponse_Journey<P,T> : IMap<P,T>
     {
+        private readonly IMap<Transport, FlightResponse> _map;
 
+        public FlightResponse_Journey(IMap<Transport, FlightResponse> map)
+        {
+            _map = map;
+        }
 
         P IMap<P, T>.Map(T origin)
         {
-            var journey = new Journey();
+            var flightResponse = new List<Flight>();
             
             List<FlightResponse> flights = (List<FlightResponse>)Convert.ChangeType(origin, typeof(List<FlightResponse>));
             foreach (var flight in flights)
             {
-                journey.Origin = flight.DepartureStation;
-                journey.Destination = flight.ArrivalStation;
-                journey.Price = flight.Price;
-                
+                var flightAux = new Flight();
+                flightAux.Origin = flight.DepartureStation;
+                flightAux.Destination = flight.ArrivalStation;
+                flightAux.Price = flight.Price;
+                flightAux.Transport = _map.Map(flight);
+                flightResponse.Add(flightAux);
+
             }
             
-            return (P)(object)journey; ;
+            return (P)(object)flightResponse; ;
         }
     }
 }

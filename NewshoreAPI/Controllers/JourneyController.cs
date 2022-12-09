@@ -29,8 +29,8 @@ namespace NewshoreAPI.Controllers
         [HttpGet("{origin}/{destination}")]
         public ActionResult Get(string origin, string destination)
         {
-            var journey = _disponibilityBusiness.GetDisponibility(new Domain.Models.Request() { Origin = origin, Destination = destination });
-            return Ok(journey);
+            var flight = _disponibilityBusiness.GetDisponibility(new Domain.Models.Request() { Origin = origin, Destination = destination });
+            return Ok(flight);
         }
 
         // POST api/<JourneyController>
